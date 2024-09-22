@@ -5,6 +5,7 @@ body{
 h1{
     color: white;
     text-align: center;
+    font-size: 4em;
 }
 
 .choix{
@@ -18,4 +19,42 @@ h1{
     margin-right: auto;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     color: white;
+    @media screen and (max-width: 1200px) {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    @media screen and (max-width: 600px) {
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+}
+
+.timer{
+    font-size: 7em;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.timerDiv{
+    border: 8px solid #f8d58e;
+    border-radius: 80%;
+    width: 26em;
+    height: 26em;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+    background-color: rgb(198, 48, 48);
+}
+
+.bordureNoire{
+    margin: auto;
+    margin-top: 5em;
+    border: 5px solid rgb(198, 48, 48);
+    border-radius: 50%;
+    width: 30em;
+    height: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
