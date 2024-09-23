@@ -1,6 +1,12 @@
-var departMinutes = 25;
-var departMinutesFormTravail;
-var departMinutesFormPause;
+let departMinutes;
+
+if (localStorage.getItem('departMinutesFormTravail') != null){
+    departMinutes = localStorage.getItem('departMinutesFormTravail');
+}
+else{
+    departMinutes = 25;
+}
+
 let temps = departMinutes * 60;
 let estLance = 0;
 let minutes;
@@ -36,10 +42,11 @@ button.addEventListener("click", ()=>{
 
 function reinitialise(){
     restoreStyle();
-    if (departMinutesFormTravail == null){
+    if (localStorage.getItem('departMinutesFormTravail') != null){
+        departMinutes = localStorage.getItem('departMinutesFormTravail');
+    }
+    else{
         departMinutes = 25;
-    }else{
-        departMinutes = departMinutesFormTravail;
     }
     timerElement.innerText = departMinutes + ":" + departSecondes;
     estLance = 0;
@@ -50,11 +57,11 @@ function changerDeVueActive(){
     restoreStyle();
     travail.style.color = "#f8d58e";
     pause.style.color = "white";
-    ////
-    if (departMinutesFormTravail == null){
+    if (localStorage.getItem('departMinutesFormTravail') != null){
+        departMinutes = localStorage.getItem('departMinutesFormTravail');
+    }
+    else{
         departMinutes = 25;
-    }else{
-        departMinutes = departMinutesFormTravail;
     }
     temps = departMinutes * 60;
     departSecondes = (temps % 60);
@@ -80,11 +87,11 @@ function changerDeVueRepos(){
     mettreEnVert();
     pause.style.color ="#f8d58e"
     travail.style.color = "white";
-    ////
-    if (departMinutesFormPause == null){
-        departMinutes = 5;
-    }else{
-        departMinutes = departMinutesFormPause;
+    if (localStorage.getItem('departMinutesFormPause') != null){
+        departMinutes = localStorage.getItem('departMinutesFormPause');
+    }
+    else{
+        departMinutes = 25;
     }
     temps = departMinutes * 60;
     departSecondes = (temps % 60);
@@ -113,9 +120,11 @@ function mettreEnVert(){
     bordureNoire.style.border = "green 5px solid";
     choix.style.border = "green 0.1em solid";
     timerDiv.style.border = "8px solid black";
+    parametre.style.backgroundColor ="green";
 }
 
 function restoreStyle(){
+    parametre.style.backgroundColor ="rgb(198, 48, 48)";
     pause.style.color = "white";
     travail.style.color = "white";
     body.style.backgroundColor ="rgb(198, 48, 48)";
@@ -187,11 +196,8 @@ boutonValider.addEventListener("click",()=>{
 function clickValider(){
     if(tempsPause.value != "" && tempsTravail.value!= ""){
         popUp.style.visibility ="hidden";
-        departMinutesFormTravail = tempsTravail.value;
-        departMinutesFormPause = tempsPause.value;
-        departMinutes = tempsTravail.value;
-        temps = departMinutes * 60;
-        departSecondes = (temps % 60);
-        depart();
+        localStorage.setItem('departMinutesFormTravail', tempsTravail.value);
+        localStorage.setItem('departMinutesFormPause', tempsPause.value);
+        location.reload;
     }
 }
