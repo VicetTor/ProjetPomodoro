@@ -67,6 +67,7 @@ function changerDeVueActive(){
     departSecondes = (temps % 60);
     
     depart();
+    temps -= 1;
 
     tempsIntervalle = setInterval(() => {
         minutes = parseInt(temps / 60);
@@ -96,6 +97,7 @@ function changerDeVueRepos(){
     temps = departMinutes * 60;
     departSecondes = (temps % 60);
     depart();
+    temps -= 1;
   
     tempsIntervalle = setInterval(() => {
 

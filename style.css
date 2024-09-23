@@ -49,6 +49,13 @@ h1{
     }
 }
 
+@media screen and (max-width: 425px) {
+    body{
+        margin-right: 2em;
+    }
+}
+
+
 #timer{
     font-size: 5em;
     color: #ffffff;
@@ -132,4 +139,5 @@ footer{
     border-radius: 10px;
     position:fixed;
     visibility: hidden;
+    left: 50%;
 }
