@@ -10,7 +10,7 @@ h1{
     font-size: 3em;
 }
 
-.choix{
+#choix{
     display: flex;
     gap: 1em;
     border:rgb(198, 48, 48) 0.1em solid;
@@ -24,14 +24,14 @@ h1{
 }
 
 @media screen and (max-width: 1200px) {
-    .choix{
+    #choix{
         padding-right: 1em;
         padding-left: 1em;
     }
 }
 
  @media screen and (max-width: 600px) {
-    .choix{
+    #choix{
         padding-right: 2em;
         padding-left: 2em;
     }
@@ -43,7 +43,7 @@ h1{
     font-family: Arial, sans-serif;
 }
 
-.timerDiv{
+#timerDiv{
     border: 8px solid #f8d58e;
     border-radius: 80%;
     width: 20em;
@@ -54,7 +54,7 @@ h1{
     background-color: rgb(198, 48, 48);
 }
 
-.bordureNoire{
+#bordureNoire{
     margin: auto;
     margin-top: 2em;
     border: 5px solid rgb(198, 48, 48);
