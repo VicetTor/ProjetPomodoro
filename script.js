@@ -1,4 +1,6 @@
 let departMinutes = 25;
+let departMinutesFormTravail;
+let departMinutesFormPause;
 let temps = departMinutes * 60;
 let estLance = 0;
 let minutes;
@@ -11,6 +13,14 @@ const body = document.body;
 const timerDiv = document.getElementById("timerDiv")
 const bordureNoire = document.getElementById("bordureNoire")
 const choix = document.getElementById("choix");
+const pause = document.getElementById("pause");
+const travail = document.getElementById("travail");
+const parametre = document.getElementById("parametre");
+const popUp = document.getElementById("popUp");
+const boutonValider = document.getElementById("valider");
+const tempsTravail = document.getElementById("tempsTravail");
+const tempsPause = document.getElementById("tempsPause");
+
 
 depart();
 
@@ -27,7 +37,12 @@ button.addEventListener("click", ()=>{
 
 function reinitialise(){
     restoreStyle();
-    departMinutes = 25;
+    ////
+    if (departMinutesFormTravail == null){
+        departMinutes = 25;
+    }else{
+        departMinutes = departMinutesFormTravail;
+    }
     timerElement.innerText = departMinutes + ":" + departSecondes;
     estLance = 0;
     temps = departMinutes * 60;
@@ -35,7 +50,14 @@ function reinitialise(){
 
 function changerDeVueActive(){
     restoreStyle();
-    departMinutes = 25;
+    travail.style.color = "#f8d58e";
+    pause.style.color = "white";
+    ////
+    if (departMinutesFormTravail == null){
+        departMinutes = 25;
+    }else{
+        departMinutes = departMinutesFormTravail;
+    }
     temps = departMinutes * 60;
     departSecondes = (temps % 60);
     
@@ -58,7 +80,14 @@ function changerDeVueActive(){
 
 function changerDeVueRepos(){   
     mettreEnVert();
-    departMinutes = 5;
+    pause.style.color ="#f8d58e"
+    travail.style.color = "white";
+    ////
+    if (departMinutesFormPause == null){
+        departMinutes = 5;
+    }else{
+        departMinutes = departMinutesFormPause;
+    }
     temps = departMinutes * 60;
     departSecondes = (temps % 60);
     depart();
@@ -89,6 +118,8 @@ function mettreEnVert(){
 }
 
 function restoreStyle(){
+    pause.style.color = "white";
+    travail.style.color = "white";
     body.style.backgroundColor ="rgb(198, 48, 48)";
     button.style.backgroundColor = "rgb(198, 48, 48)";
     timerDiv.style.backgroundColor = "rgb(198, 48, 48)";
@@ -132,4 +163,25 @@ function depart(){
     }
     timerElement.innerText = departMinutes + ":" + departSecondes
 }
-    
+
+function clickParametre(){
+    if(popUp.style.visibility == "visible"){
+        popUp.style.visibility = "hidden";
+    }
+    else{
+    popUp.style.visibility = "visible";
+    }
+}
+
+parametre.addEventListener("click", ()=>{
+    clickParametre();
+})
+
+
+boutonValider.addEventListener("click",()=>{
+    if(tempsPause.value != "" && tempsTravail.value!= ""){
+    popUp.style.visibility ="hidden";
+    departMinutesFormTravail = tempsTravail.value;
+    departMinutesFormPause = tempsPause.value;
+    }
+})

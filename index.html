@@ -13,9 +13,28 @@
     <main>
         <h1>TIMER POMODORO</h1>
         <div id="choix">
-            <p>Travail</p>
-            <p>Pause</p>
+            <p id="travail">Travail</p>
+            <p id="pause">Pause</p>
         </div>
+
+        <span class="material-symbols-outlined" id="parametre">
+            settings
+        </span>
+            
+        <form  method="get" id="popUp">
+            <div class="formulaire">
+              <label for="tempsTravail">Minutes De Travail : </label>
+              <input type="number" name="tempsTravail" id="tempsTravail" required />
+            </div>
+            <div class="formulaire">
+              <label for="tempsPause">Minutes de Pause : </label>
+              <input type="number" name="tempsPause" id="tempsPause" required />
+            </div>
+            <div class="formulaire">
+              <input id="valider" type="submit" value="Valider" />
+            </div>
+          </form>
+
 
         <div id="bordureNoire">
             <div id="timerDiv">
