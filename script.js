@@ -1,6 +1,6 @@
-let departMinutes = 25;
-let departMinutesFormTravail;
-let departMinutesFormPause;
+var departMinutes = 25;
+var departMinutesFormTravail;
+var departMinutesFormPause;
 let temps = departMinutes * 60;
 let estLance = 0;
 let minutes;
@@ -21,7 +21,6 @@ const boutonValider = document.getElementById("valider");
 const tempsTravail = document.getElementById("tempsTravail");
 const tempsPause = document.getElementById("tempsPause");
 
-
 depart();
 
 button.addEventListener("click", ()=>{
@@ -37,7 +36,6 @@ button.addEventListener("click", ()=>{
 
 function reinitialise(){
     restoreStyle();
-    ////
     if (departMinutesFormTravail == null){
         departMinutes = 25;
     }else{
@@ -154,7 +152,10 @@ function passageActive(){
     }
 }
 
+
 function depart(){
+    
+
     if(departSecondes < 10){
     departSecondes = '0' + departSecondes;
     }
@@ -179,9 +180,18 @@ parametre.addEventListener("click", ()=>{
 
 
 boutonValider.addEventListener("click",()=>{
-    if(tempsPause.value != "" && tempsTravail.value!= ""){
-    popUp.style.visibility ="hidden";
-    departMinutesFormTravail = tempsTravail.value;
-    departMinutesFormPause = tempsPause.value;
-    }
+    clickValider();
 })
+
+
+function clickValider(){
+    if(tempsPause.value != "" && tempsTravail.value!= ""){
+        popUp.style.visibility ="hidden";
+        departMinutesFormTravail = tempsTravail.value;
+        departMinutesFormPause = tempsPause.value;
+        departMinutes = tempsTravail.value;
+        temps = departMinutes * 60;
+        departSecondes = (temps % 60);
+        depart();
+    }
+}
