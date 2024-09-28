@@ -32,8 +32,8 @@ depart();
 button.addEventListener("click", ()=>{
     if(estLance == 0){
         estLance = 1;
-         changerDeVueActive();
-        }
+        changerDeVueActive();
+    }
     else if(estLance == 1){
         clearInterval(tempsIntervalle); 
         reinitialise();
@@ -42,7 +42,7 @@ button.addEventListener("click", ()=>{
 
 function reinitialise(){
     restoreStyle();
-    if (localStorage.getItem('departMinutesFormTravail') != null){
+    if(localStorage.getItem('departMinutesFormTravail') != null){
         departMinutes = localStorage.getItem('departMinutesFormTravail');
     }
     else{
@@ -72,7 +72,7 @@ function changerDeVueActive(){
     tempsIntervalle = setInterval(() => {
         minutes = parseInt(temps / 60);
         secondes = parseInt(temps % 60);
-         
+        
         verifySecondes();
         verifyMinutes();
 
@@ -81,7 +81,7 @@ function changerDeVueActive(){
         
         passageRepos();
 
-        }, 1000)
+    }, 1000)
 }
 
 function changerDeVueRepos(){   
@@ -98,7 +98,7 @@ function changerDeVueRepos(){
     departSecondes = (temps % 60);
     depart();
     temps -= 1;
-  
+
     tempsIntervalle = setInterval(() => {
 
         minutes = parseInt(temps / 60);
@@ -112,7 +112,7 @@ function changerDeVueRepos(){
         
         passageActive();
 
-        }, 1000)
+    }, 1000)
 }
 
 function mettreEnVert(){
@@ -165,13 +165,11 @@ function passageActive(){
 
 
 function depart(){
-    
-
     if(departSecondes < 10){
-    departSecondes = '0' + departSecondes;
+        departSecondes = '0' + departSecondes;
     }
     if(departMinutes < 10){
-    departMinutes = '0' + departMinutes;
+        departMinutes = '0' + departMinutes;
     }
     timerElement.innerText = departMinutes + ":" + departSecondes
 }
@@ -181,7 +179,7 @@ function clickParametre(){
         popUp.style.visibility = "hidden";
     }
     else{
-    popUp.style.visibility = "visible";
+        popUp.style.visibility = "visible";
     }
 }
 
