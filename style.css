@@ -1,4 +1,6 @@
 
+/* Css de tous les éléments de la page*/
+
 html,body{
     overflow-x: hidden;
     width: 100%;
@@ -123,6 +125,11 @@ footer{
 }
 
 
+
+
+/* Media query qui permettent de régler l'affichage en fonction du device utiliser*/
+
+
 @media screen and (max-width: 1200px) {
     #choix{
         padding-right: 1em;
@@ -130,7 +137,7 @@ footer{
     }
 }
 
- @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     #choix{
         padding-right: 2em;
         padding-left: 2em;

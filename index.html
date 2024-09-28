@@ -11,17 +11,17 @@
 </head>
 <body>
     <main>
-        <h1>TIMER POMODORO</h1>
-        <div id="choix">
+        <h1>TIMER POMODORO</h1>          <!-- Titre Correspondant au Pomodoro-->
+        <div id="choix">                  <!-- Les deux choix possibles-->
             <p id="travail">Travail</p>
             <p id="pause">Pause</p>
         </div>
 
-        <span class="material-symbols-outlined" id="parametre">
-            settings
+        <span class="material-symbols-outlined" id="parametre">    <!-- Les réglages modifiables-->
+            settings 
         </span>
             
-        <form  method="get" id="popUp">
+        <form  method="get" id="popUp">   <!-- Le formulaire pour régler temps de travail et de pause-->
             <div class="formulaire">
                 <label for="tempsTravail">Minutes De Travail : </label>
                 <input type="number" name="tempsTravail" id="tempsTravail" min="0" max="360" required />
@@ -36,13 +36,13 @@
         </form>
 
 
-        <div id="bordureNoire">
+        <div id="bordureNoire">    <!--  Le cercle correspondant au temps restant-->
             <div id="timerDiv">
                 <div id="timer"></div>
             </div>
         </div>
 
-        <button class="material-symbols-outlined" id="bouton" >play_arrow</button>
+        <button class="material-symbols-outlined" id="bouton" >play_arrow</button>   <!-- Bouton play qui active le chronomètre -->
 
     </main>
     <footer>
