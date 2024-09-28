@@ -24,11 +24,11 @@
         <form  method="get" id="popUp">   <!-- Le formulaire pour régler temps de travail et de pause-->
             <div class="formulaire">
                 <label for="tempsTravail">Minutes De Travail : </label>
-                <input type="number" name="tempsTravail" id="tempsTravail" min="0" max="360" required />
+                <input type="number" name="tempsTravail" id="tempsTravail" min="1" max="360" step="1" required />
             </div>
             <div class="formulaire">
                 <label for="tempsPause">Minutes de Pause : </label>
-                <input type="number" name="tempsPause" id="tempsPause" min="0" max="360" required />
+                <input type="number" name="tempsPause" id="tempsPause" min="1" max="360" step="1" required />
             </div>
             <div class="formulaire">
                 <input id="valider" type="submit" value="Valider" />
