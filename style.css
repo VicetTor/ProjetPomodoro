@@ -132,22 +132,32 @@ footer{
 
 @media screen and (max-width: 1200px) {
     #choix{
-        padding-right: 1em;
-        padding-left: 1em;
+        padding-inline: 2em;
     }
 }
 
-@media screen and (max-width: 600px) {
-    #choix{
-        padding-right: 2em;
-        padding-left: 2em;
-    }
-}
-
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
     #bordureNoire{
         width: 25em;
         height: 25em;
+    }
+    #popUp{
+        width: 9em;
+    }
+    
+    #choix{
+        padding-inline: 3em;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    #bordureNoire{
+        width: 22em;
+        height: 22em;
+    }
+    #timerDiv{
+        height: 20em;
+        width: 20em;
     }
     #popUp{
         width: 9em;
@@ -196,7 +206,7 @@ footer{
     }
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:321px){
     #bordureNoire{
         width: 18em;
         height: 18em;
@@ -206,7 +216,7 @@ footer{
         width: 16em;
     }
     #popUp{
-        width: 5em;
+        width: 8em;
     }
 }
 
