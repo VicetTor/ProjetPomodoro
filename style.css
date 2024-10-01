@@ -154,6 +154,34 @@ footer{
     }
 }
 
+@media screen and (max-width:391px){
+    #bordureNoire{
+        width: 20em;
+        height: 20em;
+    }
+    #timerDiv{
+        height: 18em;
+        width: 18em;
+    }
+    #popUp{
+        width: 9em;
+    }
+}
+
+@media screen and (max-width:385px){
+    #bordureNoire{
+        width: 20em;
+        height: 20em;
+    }
+    #timerDiv{
+        height: 18em;
+        width: 18em;
+    }
+    #popUp{
+        width: 9em;
+    }
+}
+
 @media screen and (max-width: 375px) {
     #bordureNoire{
         width: 21em;
