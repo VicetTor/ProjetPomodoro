@@ -1,11 +1,30 @@
-# Projet Pomodoro de R3.01
-Projet concernant un timer intitulé Pomodoro qui permet d'avoir un temps de travail puis un temps de pause.
-# Page Pomodoro en HTML, CSS et Javascript
+# 🍅 Projet Pomodoro 
+Le Pomodoro Timer est une application qui permet d'améliorer la productivité en utilisant une méthode intitulée Pomodoro, celle-ci consiste à travailler avec des sessions découpées de travail et de pauses.
+
+Projet réalisé pendant le cours de développement Web de R3.01.
+## 🚀 Vers le projet 
+Lien : https://vicettor.github.io/ProjetPomodoro/
+## 🧑‍💻 Auteurs 
+Louane K'DUAL et Victor YVRAY RUFFINATTI TD2.2  
+## :memo: Deadline
 Création jusqu'au premier octobre 2024.
-# Langages utilisés :
+## 💬 Langages utilisés 
 * HTML5 / CSS3
 * JS
-# Réalisé par :
-Louane K'DUAL et Victor YVRAY RUFFINATTI TD2.2
+## ✨ Fonctionnalités
+✔️ Lancement de l'application grâce à un bouton PLAY.
 
-🚀 Lien du projet : https://vicettor.github.io/ProjetPomodoro/
+✔️ Reinitialisation de l'application grâce au même bouton.
+
+✔️ Passage du mode travail au repos.
+
+✔️ Bascule entre le travail et la pause.
+
+✔️ Formulaire permettant de choisir le temps de travail et de pause.
+
+✔️ Sauvegarde des paramètres grâce au localStorage.
+
+✔️ Application Responsive.
+
+## Remerciements 
+[@princecorg](https://github.com/princecorg)
