@@ -12,28 +12,19 @@ Création jusqu'au premier octobre 2024.
 * HTML5 / CSS3
 * JS
 ## ✨ Fonctionnalités
-[x] Lancement de l'application grâce à un bouton PLAY.
+✔️ Lancement de l'application grâce à un bouton PLAY.
 
+✔️ Reinitialisation de l'application grâce au même bouton.
 
-[x] Reinitialisation de l'application grâce au même bouton.
+✔️ Passage du mode travail au repos.
 
+✔️ Bascule entre le travail et la pause.
 
-[x] Passage au mode travail.
+✔️ Formulaire permettant de choisir le temps de travail et de pause.
 
+✔️ Sauvegarde des paramètres grâce au localStorage.
 
-[x] Passage au mode repos.
-
-
-[x] Bascule entre le travail et la pause.
-
-
-[x] Formulaire permettant de choisir le temps de travail et de pause.
-
-
-[x] Sauvegarde des paramètres grâce au localStorage.
-
-
-[x] Application Responsive.
+✔️ Application Responsive.
 
 ## Remerciements 
 [@princecorg](https://github.com/princecorg)
